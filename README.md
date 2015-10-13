@@ -1,0 +1,3 @@
+# my eslintrc
+オレオレeslintrc :relieved:
+
