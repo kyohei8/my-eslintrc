@@ -55,6 +55,7 @@ rules:
   no-div-regex            : 2            # 正規表現で`/=`を禁止
   no-else-return          : 1            # elseでのreturnを警告
   no-empty-label          : 2            # ラベルの下は必ずループ分にする(ただし`no-label`で禁止される場合がある）
+  no-empty-pattern        : 2            # Destructuring構文で空のオブジェクトを禁止
   no-eq-null              : 2            # nullで比較するときは`===`,`!==`を利用する
   no-eval                 : 2            # evalは禁止
   no-extend-native        : 2            # ネイティブオブジェクトへのprototypeの追加を禁止
@@ -68,6 +69,9 @@ rules:
   no-labels               : 2            # labeledの使用を禁止
   no-lone-blocks          : 2            # 不要なブロックスコープを禁止
   no-loop-func            : 2            # ループ内での関数の定義を禁止
+  no-magic-number         : [2, {        # マジックナンバーを禁止
+    enforceConst: true
+  }]
   no-multi-spaces         : [2, {        # 不要なスペース文字を禁止
     exceptions: {
       'Property'           : true,
