@@ -69,7 +69,7 @@ rules:
   no-labels               : 2            # labeledの使用を禁止
   no-lone-blocks          : 2            # 不要なブロックスコープを禁止
   no-loop-func            : 2            # ループ内での関数の定義を禁止
-  no-magic-number         : [2, {        # マジックナンバーを禁止
+  no-magic-numbers        : [2, {        # マジックナンバーを禁止
     enforceConst: true
   }]
   no-multi-spaces         : [2, {        # 不要なスペース文字を禁止
