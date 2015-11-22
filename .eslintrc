@@ -69,7 +69,7 @@ rules:
   no-labels               : 2            # labeledの使用を禁止
   no-lone-blocks          : 2            # 不要なブロックスコープを禁止
   no-loop-func            : 2            # ループ内での関数の定義を禁止
-  no-magic-numbers        : [2, {        # マジックナンバーを禁止
+  no-magic-numbers        : [0, {        # マジックナンバーを禁止
     enforceConst: true
   }]
   no-multi-spaces         : [2, {        # 不要なスペース文字を禁止
@@ -122,7 +122,7 @@ rules:
     hoist         : 'all'
   }]
   no-undef-init           : 2            # 変数のデフォルト値に`undefined`を利用するのを禁止
-  no-undef                : 2            # 定義されていない変数の利用を禁止
+  no-undef                : 1            # 定義されていない変数の利用を禁止
   no-undefined            : 2            # `undefined`の利用を禁止
   no-unused-vars          : 2            # 利用されていない変数がある場合エラー
   no-use-before-define    : [1, 'nofunc'] # 前に定義されていない変数の利用を禁止(ただし関数宣言は許可)
@@ -160,7 +160,7 @@ rules:
     SwitchCase: 1
   }]
   jsx-quotes              : [2, 'prefer-double'] # JSXではダブルクォートを優先的に使用(JSXのみ)
-  key-spacing             : [2, {           #オブジェクトのコロンの位置を揃える
+  key-spacing             : [0, {           #オブジェクトのコロンの位置を揃える
     align: "colon"
   }]
   lines-around-comment    : [2, {           # コメント行の前後の空行
