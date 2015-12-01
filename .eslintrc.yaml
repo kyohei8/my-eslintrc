@@ -6,9 +6,9 @@ plugins: []
 # eslint rules -> 0: disable, 1: warn, 2: error
 rules:
   # Possible Errors
-  comma-dangle            : [1, 'never'] # ケツカンマ無効
+  comma-dangle            : [2, 'never'] # ケツカンマ無効
   no-cond-assign          : 2            # 条件式で'='を禁止
-  no-console              : 0            # `console`を警告
+  no-console              : 1            # `console`を警告
   no-constant-condition   : 2            # 条件式に定数を禁止
   no-control-regex        : 2            # 正規表現で制御文字を禁止
   no-debugger             : 1            # `debugger`を警告
@@ -19,8 +19,8 @@ rules:
   no-empty                : 2            # 空のブロックスコープを禁止
   no-ex-assign            : 2            # Exceptionの引数に代入禁止
   no-extra-boolean-cast   : 2            # 条件式、Booleanの引数で`!!`を禁止
-  no-extra-parens         : 0            # 不必要な括弧を警告
-  no-extra-semi           : 0            # 不要なセミコロンを禁止
+  no-extra-parens         : 1            # 不必要な括弧を警告
+  no-extra-semi           : 2            # 不要なセミコロンを禁止
   no-func-assign          : 2            # functionへの再代入を禁止
   no-inner-declarations   : [2, 'both']  # ifなどのブロックスコープ内で関数宣言を禁止
   no-invalid-regexp       : 2            # 不正な正規表現の構文を禁止
@@ -48,6 +48,7 @@ rules:
   guard-for-in            : 2            # for-inでhasOwnPropertyを必須
   no-alert                : 1            # alertを警告
   no-caller               : 2            # `arguments.callee`, `arguments.caller`を禁止
+  no-case-declarations    : 0            # caseで{}を利用するかどうか
   no-div-regex            : 2            # 正規表現で`/=`を禁止
   no-else-return          : 1            # elseでのreturnを警告
   no-empty-label          : 2            # ラベルの下は必ずループ分にする(ただし`no-label`で禁止される場合がある）
@@ -119,7 +120,7 @@ rules:
     hoist         : 'all'
   }]
   no-undef-init           : 2            # 変数のデフォルト値に`undefined`を利用するのを禁止
-  no-undef                : 0            # 定義されていない変数の利用を禁止
+  no-undef                : 1            # 定義されていない変数の利用を禁止
   no-undefined            : 2            # `undefined`の利用を禁止
   no-unused-vars          : 2            # 利用されていない変数がある場合エラー
   no-use-before-define    : [1, 'nofunc'] # 前に定義されていない変数の利用を禁止(ただし関数宣言は許可)
@@ -144,13 +145,13 @@ rules:
     allowSingleLine: true                   # 1行記法は許可
   }]
   camelcase               : 2               # キャメルケースで書くこと
-  comma-spacing           : 0               # カンマの前後のスペース位置
+  comma-spacing           : 2               # カンマの前後のスペース位置
   comma-style             : [2, 'last']     # 改行時のカンマの位置
   computed-property-spacing: 2              # 添字の括弧内のスペース
   consistent-this         : [2, 'self']     # thisを代入する場合はselfを利用する
   eol-last                : 2               # 最終行の空行を禁止
   func-names              : 0               # 無名関数は許可
-  func-style              : [0, 'expression'] # 関数式を利用
+  func-style              : [2, 'expression'] # 関数式を利用
   id-length               : 0               # 変数名の長さ
   id-match                : 0               # 変数名の規則
   indent                  : [2, 2, {        # インデント
@@ -180,7 +181,7 @@ rules:
   no-inline-comments      : 2               # inline commentを許可しない
   no-lonely-if            : 2               # elseの中にifのみを書くのを禁止
   no-mixed-spaces-and-tabs: 2               # タブ文字とスペース文字の混在を禁止
-  no-multiple-empty-lines : 0               # 複数行に渡る空行を禁止
+  no-multiple-empty-lines : 2               # 複数行に渡る空行を禁止
   no-nested-ternary       : 2               # 三項演算子のネストを禁止
   no-negated-condition    : 2               # 否定句とelseを使ったif文を禁止
   no-new-object           : 2               # `Object`のnewを禁止(`{}`リテラルを使う)
@@ -213,6 +214,7 @@ rules:
   wrap-regex              : 0                # 正規表現リテラルを括弧でくくらなくてもいい
 
   # ECMAScript 6
+  arrow-body-style        : [2, "as-needed"] # arrow funcを括弧でラップするかどうか
   arrow-parens            : [2, 'always']    # arrow functionの括弧は必要
   arrow-spacing           : [2, {            # arrow functionの前後のスペースは付ける
     before: true,
@@ -223,6 +225,7 @@ rules:
     before: true,
     after : false
   }]
+  no-arrow-condition      : 2                # 条件式内でallow funcを使っていいかどうか
   no-class-assign         : 2                # クラスとして定義した変数に再代入を禁止
   no-const-assign         : 2                # constの再代入を禁止
   no-dupe-class-members   : 2                # クラスメンバの重複を禁止
@@ -232,7 +235,7 @@ rules:
   prefer-arrow-callback   : 2                # コールバックにはarrow functionを使う
   prefer-const            : 2                # constの利用を推奨
   prefer-spread           : 2                # `apply`ではなくspered opratorを利用する
-  prefer-reflect          : 0                # Refrectの利用する
+  prefer-reflect          : 2                # Refrectの利用する
   prefer-template         : 2                # template stringsを利用する
   require-yield           : 2                # generatorではyieldを必須
 
