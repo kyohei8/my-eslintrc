@@ -1,14 +1,10 @@
 # vim:set ft=yaml:
 parser: "babel-eslint"
 
-plugins: [
-  'filenames'
-]
+plugins: []
 
 # eslint rules -> 0: disable, 1: warn, 2: error
 rules:
-  # plugins
-  filenames/filenames     : [2, "^[A-Z][A-Za-z.]+$"] # ファイル名の規則(キャメルケースで書く)
   # Possible Errors
   comma-dangle            : [2, 'never'] # ケツカンマ無効
   no-cond-assign          : 2            # 条件式で'='を禁止
@@ -96,7 +92,8 @@ rules:
   no-sequences            : 2            # カンマで式を分割するのを禁止。利用する場合はカッコで括る
   no-throw-literal        : 2            # throwする場合はnew Errorを使う
   no-unused-expressions   : [2, {        # 不要な評価式を禁止
-    allowShortCircuit: true              # `||`,`&&`は許可
+    allowShortCircuit: true,             # `||`,`&&`は許可
+    allowTernary: true                   # 三項演算子内
   }]
   no-useless-call         : 2            # 不必要な.call(), .apply()を禁止
   no-useless-concat       : 2            # 不正な文字列連結を禁止
