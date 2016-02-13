@@ -1,0 +1,20 @@
+# loose modeでの差分のみを書く
+rules:
+  comma-dangle            : [1, 'never'] # ケツカンマ
+  no-console              : 0            # `console`を警告
+  no-debugger             : 0            # `debugger`を警告
+  no-empty                : 0            # 空のブロックスコープを禁止
+  no-extra-parens         : 0            # 不必要な括弧を警告
+  no-extra-semi           : 0            # 不要なセミコロンを禁止
+  # Best Practices
+  default-case            : 0            # switch文でdefaultを必ず付ける
+  no-alert                : 0            # alertを警告
+  no-empty-function       : 0            # 空のfunctionを禁止
+  no-param-reassign       : 0            # 引数の再代入は許可。
+  # Variables
+  no-undef                : 0            # 定義されていない変数の利用を禁止
+  no-unused-vars          : 0            # 利用されていない変数がある場合エラー
+
+  # Legacy
+  max-len                 : [2, 120, 2]      # 1行における文字数
+  max-statements          : [2, 30]          # ステートメント数
